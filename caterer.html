@@ -1,0 +1,796 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <!-- Custom CSS -->
+<link href="css/landing-page.css" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" language="javascript">
+	jQuery.fn.center = function () {
+		this.css("position","absolute");
+		this.css("top", ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + "px");
+		this.css("left", ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + "px");
+		return this;
+	}
+ 
+	$(document).ready(function() {		
+		$("#thumbnail img").click(function(e){
+		
+			$("#background").css({"opacity" : "0.7"})
+							.fadeIn("slow");			
+						
+			$("#large").html("<img src='"+$(this).parent().attr("href")+"' alt='"+$(this).attr("alt")+"' /><br/>"+$(this).attr("rel")+"")
+					   .center()
+					   .fadeIn("slow");			
+			
+			return false;
+		});
+			
+		$(document).keypress(function(e){
+			if(e.keyCode==27){
+				$("#background").fadeOut("slow");
+				$("#large").fadeOut("slow");
+			}
+		});
+		
+		$("#background").click(function(){
+			$("#background").fadeOut("slow");
+			$("#large").fadeOut("slow");
+		});
+		
+		$("#large").click(function(){
+			$("#background").fadeOut("slow");
+			$("#large").fadeOut("slow");
+		});
+		
+	});
+</script>
+
+<link href="css/shop-homepage.css" rel="stylesheet">
+
+<title>Caterer</title>
+
+<style>
+.blueback
+{
+font-family:cursive;
+}
+.centertext
+{
+text-align:center;
+}
+.roundborder
+{
+border:1px solid #FF9900;
+border-radius:5px
+}
+.yellowtext
+{color:#FF9900;
+font-size:20px
+}
+.fixedpos
+{
+position:fixed;
+}
+.fullheight
+{
+height:100%;
+}
+
+#chktext:hover
+{
+color:#FF9900;
+}
+.thumbnail {
+    float: left;
+    width: 110px;
+    height: 200px;
+    margin: 7px;
+	cursor:pointer;
+	transition: width 2s, height 1s;
+}
+.thumbnail:hover
+{
+width:220px;
+height:400px;
+}
+.topmargin
+{
+margin-top:3%;
+}
+.leftblock
+{
+border-right:1px solid #FF9900;
+border-bottom:1px solid #FF9900;
+padding-left:50px;
+}
+#colorbut:hover
+{
+opacity:.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+    margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+    margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+    margin: 0;
+    text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+    margin: 0;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+@media(min-width:767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content p {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+    margin: 20px 0 30px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 10px;
+    height: 10px;
+    margin-left: 35px;
+    background-color: #222;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 10px;
+    height: 10px;
+    background-color: #222;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+.fav_btn {
+    padding: 5px;
+    background-color:blue;
+    color: white;
+}
+.fav_btn:hover {
+    background-color: lightblue;
+}
+.fav_btn.remove:hover {
+    background-color: pink;
+}
+
+
+#thumbnail img {
+	cursor: pointer;	
+}
+#large {
+	display: none;
+	position: absolute;		
+	background: #FFFFFF;	
+	padding: 5px;
+	z-index: 10;
+	min-height: 200px;
+	min-width: 200px;
+	color: #336699;
+}
+#background{
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: #000000;	
+	z-index: 1;
+}
+ 
+ 
+
+
+
+</style>
+
+
+
+<script>
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 0) {
+     $('#myTab li').css('background','none');
+    } else {
+       $('#myTab li').css('background','');
+    }
+});
+
+function hov(){
+document.getElementById("m1").src="https://www.google.com/maps/d/u/0/embed?mid=zWQQaYXCZq5A.ks83mvbUlKp8";
+document.getElementById("m1").style.width="200px";
+document.getElementById("m1").style.height="200px";
+
+}
+
+</script>
+
+
+
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-default topnav mainHeaderDiv" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div>
+                <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+                <nav id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                        <li class="sidebar-brand">
+                            <a href="#top">Categories</a>
+                        </li>
+                         <li>
+                            <a href="bridedress.html">Bride Dress</a>
+                        </li>
+                        <li>
+                            <a href="groomdress.html">Groom Dress</a>
+                        </li>
+                        <li>
+                            <a href="caterers.html">Caterers & vendors</a>
+                        </li>
+                        <li>
+                            <a href="honeymoon.html">Honeymoon Spots</a>
+                        </li>
+                        <li>
+                            <a href="jewelry.html">Jewelry</a>
+                        </li>
+                        <li>
+                            <a href="cards.html">Cards</a>
+                        </li>
+                        <li>
+                            <a href="venue.html">Venue</a>
+                        </li>
+                        <li>
+                            <a href="guestlist.html">Making guest list</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navbar-header">
+                <a class="topnav headerFont" href="#">Wedding Planning Redefined</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li>
+                        <div class="btn-group show-on-hover">
+                            <button type="button" class="btn btn-default dropdown-toggle marginTop" data-toggle="dropdown">Cindy <span class="caret"></span>
+                            </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Account Settings</a></li>
+                            <li><a href="favorite.html">Favorites</a></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+	
+	
+
+   <nav class="navbar navbar-inverse " role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html" >Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="category2.html" >Bride Dress</a>
+                    </li>
+                    <li>
+                        <a href="groom3.html" >Groom Dress</a>
+                    </li>
+                    <li>
+                        <a href="caterer.html" style="color: white;" >Caterers & vendors</a>
+                    </li>
+					<li>
+                        <a href="music.html"  >Music</a>
+                    </li>
+					<li>
+                        <a href="honeymoon.html"  >Honeymoon Spots</a>
+                    </li>
+					<li>
+                        <a href="jewelry.html"  >Jewelry</a>
+                    </li>
+					<li>
+                        <a href="cards.html">Cards</a>
+                    </li>
+					<li>
+                        <a href="venue.html" >Venue</a>
+                    </li>
+					<li>
+                        <a href="guestlist.html" >Making guest list</a>
+                    </li>
+					
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+		
+		
+		
+        <!-- /.container -->
+    </nav>
+
+<!-- Tab 1 -->
+<div style="margin-left:40px;">
+You are here: <a href="index.html">Home</a> -> <a href="#">Caterer</a>
+</div>
+
+
+   <div class="tab-pane fade in active " id="home" >
+   
+  
+   <!-- Tab 1 ends -->
+   
+      <div class="tab-pane fade  in active" id="Bride">
+    <div class="row">
+	
+	
+	
+	<form name="f1" id="f1" method="GET">
+	<div class="col-md-2 roundborder topmargin leftblock">
+	<br>
+	<input type="submit" name="Submit" id="submit" value="Apply">&nbsp;&nbsp;
+	<input type="reset" name="Clear" id="clear" value="Clear">
+	<br><br>
+	<iframe src="https://www.google.com/maps/d/u/0/embed?mid=zic0UqmytNYk.k_gfZdXoKNuc" width="200" height="200" id="m1"></iframe><br><br>
+	<br>
+
+	<b>Location</b>
+	
+	<br>
+	<span id="chktext"><input type="checkbox" name="EverPretty" value="EverPretty" />&nbsp;Within 10 miles</span> <br />
+	<span id="chktext"><input type="checkbox" name="Eyekepper" value="Eyekepper" />&nbsp;Within 50 miles</span> <br />
+	<span id="chktext"><input type="checkbox" name="TRURENDI" value="TRURENDI" />&nbsp;Within 80 miles</span><br />
+	<span id="chktext"><input type="checkbox" name="Dressystar" value="Dressystar" />&nbsp;Within 100 miles</span> <br />
+	<span id="chktext"><input type="checkbox" name="FairOnly" value="FairOnly" />&nbsp;Over 100 miles</span> <br />
+	
+	<br><br>
+	
+	
+	<b>Cuisine</b>
+	
+	<br>
+	<span id="chktext"><input type="checkbox" name="EverPretty" value="EverPretty" />&nbsp;Thai</span> <br />
+	<span id="chktext"><input type="checkbox" name="Eyekepper" value="Eyekepper" />&nbsp;Chinese</span> <br />
+	<span id="chktext"><input type="checkbox" name="TRURENDI" value="TRURENDI" />&nbsp;Mexican</span><br />
+	<span id="chktext"><input type="checkbox" name="Dressystar" value="Dressystar" />&nbsp;Italian</span> <br />
+	<span id="chktext"><input type="checkbox" name="FairOnly" value="FairOnly" />&nbsp;Others</span> <br />
+	
+	<br><br>
+	
+	
+	
+		
+	<b>Rating</b>
+	<br>
+	<span id="chktext"><input type="checkbox" name="EverPretty" value="EverPretty" />&nbsp;<img src="data/5.png" style="height: 30px; width:100px; margin-left:5px; "></span> <br />
+	<span id="chktext"><input type="checkbox" name="Eyekepper" value="Eyekepper" />&nbsp;<img src="data/4.png" style="height: 30px; width:100px; margin-left:5px; "></span> <br />
+	<span id="chktext"><input type="checkbox" name="TRURENDI" value="TRURENDI" />&nbsp;<img src="data/3.png" style="height: 30px; width:100px; margin-left:5px; "></span><br />
+	<span id="chktext"><input type="checkbox" name="Dressystar" value="Dressystar" />&nbsp;<img src="data/2.png" style="height: 30px; width:100px; margin-left:5px; "></span> <br />
+	<span id="chktext"><input type="checkbox" name="FairOnly" value="FairOnly" />&nbsp;<img src="data/1.png" style="height: 30px; width:100px; margin-left:5px; "></span> <br />
+	<br>
+	<br>
+	<br>
+	
+	
+	<b>Price</b>
+	<br>
+	<span id="chktext"><input type="checkbox" name="p1" value="EverPretty" />&nbsp;Under $500</span> <br />
+	<span id="chktext"><input type="checkbox" name="p3" value="TRURENDI" />&nbsp;$500 to $700</span><br />
+	<span id="chktext"><input type="checkbox" name="p4" value="Dressystar" />&nbsp;$700 to $800</span> <br />
+	<span id="chktext"><input type="checkbox" name="p5" value="Dressystar" />&nbsp;$800 to $1000</span> <br />
+	<span id="chktext"><input type="checkbox" name="p6" value="FairOnly" />&nbsp;Above $1000</span> <br />
+	
+	
+	<br>
+	
+	</form>
+	</div>
+	
+	<div class="col-md-9 topmargin" >
+	
+
+  <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-md-5 col-sm-5 portfolio-item" style="margin-left: 100px; max-width: 300px; height:200px; padding-left: 30px; margin-bottom: 10px;">
+                    <a href="catererdet.html" class="portfolio-link"  title="See more">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/enlargedimage3.jpg" style="height:86%;width:100%"class="img-responsive" alt="" >
+                    </a>
+                    <div style="padding:8px; text-align:center;">
+                        <a href="catererdet.html" style="text-decoration:none; color:orange;"><h4>Anoush Catering Company</h4> </a>
+                        <p class="text-muted">Within 20 miles | <img src="data/4.png" style="margin-left: 10px; height: 25px; width: 70px;" ></p>
+						<div>
+						<div> <button type="button" class="glyphicon glyphicon-heart orange btn btn-default spacebut">&nbsp;<font size="3" color="#FF9900" face="Tahoma">Add to favourites</font></button> </div>
+						
+						<div class="urlImg"><a href="#"  title="See map"> <img  src="data/point.png" style="height: 30px; width: 20px; float:right; margin-right: 15px; " alt="Check on map" onclick='hov()'> </a> </div>
+						
+						</div>
+					</div>
+                </div>
+				
+				
+				
+				 <div class="col-md-5 col-sm-5 portfolio-item" style="margin-left: 10px; max-width: 300; max-height:200; padding-left: 30px; margin-bottom: 10px;">
+                    <a href="http://www.jbclothiers.com/" class="portfolio-link" data-toggle="modal" title="See more">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="data/caterer/2.jpg" class="img-responsive" alt="" >
+                    </a>
+                    <div style="padding:8px; text-align:center;">
+                        <a href="http://www.jbclothiers.com/" style="text-decoration:none; color:orange;"><h4>Season's Catering</h4> </a>
+                        <p class="text-muted">Within 40 miles | <img src="data/5.png" style="margin-left: 10px; height: 25px; width: 70px;" ></p>
+						<div>
+						<div> <button type="button" class="glyphicon glyphicon-heart orange btn btn-default spacebut">&nbsp;<font size="3" color="#FF9900" face="Tahoma">Add to favourites</font></button> </div>
+						
+						<div class="urlImg"><a href="#"  title="See map"> <img  src="data/point.png" style="height: 30px; width: 20px; float:right; margin-right: 15px; " alt="Check on map" onclick='hov()'> </a> </div>
+						</div>
+					</div>
+                </div>
+				
+				
+				 <div class="col-md-5 col-sm-5 portfolio-item" style="margin-left: 10px; width: 300px; height:200px; padding-left: 30px; margin-bottom: 10px;">
+                    <a href="http://www.jbclothiers.com/" class="portfolio-link" data-toggle="modal" title="See more">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="data/caterer/3.jpg" class="img-responsive" alt="" >
+                    </a>
+                    <div style="padding:8px; text-align:center;">
+                        <a href="http://www.jbclothiers.com/" style="text-decoration:none; color:orange;"><h4>LA Food Company</h4> </a>
+                        <p class="text-muted">Within 20 miles | <img src="data/3.png" style="margin-left: 10px; height: 25px; width: 70px;" ></p>
+						<div>
+						<div> <button type="button" class="glyphicon glyphicon-heart orange btn btn-default spacebut">&nbsp;<font size="3" color="#FF9900" face="Tahoma">Add to favourites</font></button> </div>
+						
+						<div class="urlImg"><a href="#"  title="See map"> <img  src="data/point.png" style="height: 30px; width: 20px; float:right; margin-right: 15px; " alt="Check on map" onclick='hov()'> </a> </div>
+						</div>
+					</div>
+                </div>
+				
+				</div>
+				<div class="row" >
+				
+				
+				 <div class="col-md-5 col-sm-5 portfolio-item" style="margin-left: 100px; width: 300px; height:200px; padding-left: 30px; margin-top: 220px; float: left; padding-top:30px;">
+                    <a href="http://www.jbclothiers.com/" class="portfolio-link" data-toggle="modal" title="See more">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="data/caterer/4.jpg" class="img-responsive" alt="" >
+                    </a>
+                    <div style="padding:8px; text-align:center;">
+                        <a href="http://www.jbclothiers.com/" style="text-decoration:none; color:orange;"><h4>Quality Catering Cuisine </h4> </a>
+                       <p class="text-muted">Within 80 miles | <img src="data/3.png" style="margin-left: 10px; height: 25px; width: 70px;" ></p>
+						<div>
+						<div> <button type="button" class="glyphicon glyphicon-heart orange btn btn-default spacebut">&nbsp;<font size="3" color="#FF9900" face="Tahoma">Add to favourites</font></button> </div>
+						
+						<div class="urlImg"><a href="#"  title="See map"> <img  src="data/point.png" style="height: 30px; width: 20px; float:right; margin-right: 15px; " alt="Check on map" onclick='hov()'> </a> </div>
+						</div>
+					</div>
+                </div>
+				
+				
+				
+				 <div class="col-md-5 col-sm-5 portfolio-item" style="margin-left: 10px; width: 300px; height:200px; padding-left: 30px; margin-top: 250px; float: left;">
+                    <a href="http://www.jbclothiers.com/" class="portfolio-link" data-toggle="modal" title="See more">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="data/caterer/5.jpg" class="img-responsive" alt="" >
+                    </a>
+                    <div style="padding:8px; text-align:center;">
+                        <a href="http://www.jbclothiers.com/" style="text-decoration:none; color:orange;"><h4>Spitfire Events </h4> </a>
+                        <p class="text-muted">Within 60 miles | <img src="data/4.png" style="margin-left: 10px; height: 25px; width: 70px;" ></p>
+						<div>
+						<div> <button type="button" class="glyphicon glyphicon-heart orange btn btn-default spacebut">&nbsp;<font size="3" color="#FF9900" face="Tahoma">Add to favourites</font></button> </div>
+						
+						<div class="urlImg"><a href="#"  title="See map"> <img  src="data/point.png" style="height: 30px; width: 20px; float:right; margin-right: 15px; " alt="Check on map" onclick='hov()'> </a> </div>
+						</div>
+					</div>
+                </div>
+				
+				
+				 <div class="col-md-5 col-sm-5 portfolio-item" style="margin-left: 10px; width: 300px; height:200px; padding-left: 30px; margin-top: 250px; float: left;">
+                    <a href="http://www.jbclothiers.com/" class="portfolio-link" data-toggle="modal" title="See more">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="data/caterer/6.jpg" class="img-responsive" alt="" >
+                    </a>
+                    <div style="padding:8px; text-align:center;">
+                        <a href="http://www.jbclothiers.com/" style="text-decoration:none; color:orange;"><h4>Melrose Catering</h4> </a>
+                        <p class="text-muted">Within 20 miles | <img src="data/4.png" style="margin-left: 10px; height: 25px; width: 70px;" ></p>
+						<div>
+						<div> <button type="button" class="glyphicon glyphicon-heart orange btn btn-default spacebut">&nbsp;<font size="3" color="#FF9900" face="Tahoma">Add to favourites</font></button> </div>
+						
+						<div class="urlImg"><a href="#"  title="See map"> <img  src="data/point.png" style="height: 30px; width: 20px; float:right; margin-right: 15px; " alt="Check on map" onclick='hov()'> </a> </div>
+						</div>
+					</div>
+                </div>
+				
+				
+				
+				 
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				 
+				
+				
+				
+				
+				 
+				
+				
+				
+				
+				
+				
+				
+				            
+				
+            </div>
+        </div>
+    </section>
+	
+    </div>
+   
+   </div>  
+   
+   </div>
+   
+ <div style="height: 200px; ">
+</div> 
+  
+   <!-- end of tabs -->
+   
+
+<!-- Footer -->
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="list-inline centerText">
+                        <li>                        
+                            <a href="index.html" class="colorFont">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-inline centerText">
+                        <li>
+                            <a  class="colorFont">About Us</a>
+                            <p class="fontSize">Established since 2015. Serving the needs of the wedding couples on the go. Get the information whenever needed, wherever you are.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-inline centerText">
+                    
+                        <li>
+                            <a class="colorFont" >Contact Us</a>
+                            <p class="fontSize">help@wpredefined.com<br/>213-123-1234</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-inline centerText">
+                        <li>
+                            <a href="feedback.html" class="colorFont">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline centerText">
+                       
+                    </ul>
+                    <p class="centerText colorFont copyright text-muted small">Copyright &copy; Wedding Planning Redefined 2015. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+ <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+<noscript>
+</body>
+</html>

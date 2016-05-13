@@ -1,0 +1,708 @@
+/*!
+ * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+}
+
+.mainHeaderDiv{
+    background-color: orange;
+    border-color: #e7e7e7;
+}
+/*side bar navigation*/
+.btn-dark {
+    border-radius: 0;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active {
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+}
+.btn-light {
+    border-radius: 0;
+    color: #333;
+    background-color: orange;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active {
+    color: #333;
+    background-color: rgba(255,255,255,0.8);
+}
+
+.pull-right {
+    float: right;
+}
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    overflow-y: auto;
+    background: orange;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #000;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: white;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #000;
+    background: none;
+}
+
+#menu-toggle {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#sidebar-wrapper.active {
+    left: 0px;
+    width: 250px;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.toggle {
+    margin: 5px 5px 0 0;
+}
+
+
+.topnav {
+    font-size: 14px; 
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/wedding.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/Precious.ttf);
+}
+
+.headerFont{
+    font-family:myFirstFont;
+    display: inline-block;
+    font-size: 27px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 350px;
+
+}
+
+.headerFont:hover, .headerFont:focus{
+    color:white;
+    text-decoration: none;
+}
+
+.intro-message > h1 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-family:myFirstFont;
+    font-size: 2em;
+    margin-left: 650px;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-left: 700px;
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size:20px;
+    margin-left: 650px;
+}
+
+.intro-message > h4 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size:15px;
+    margin-left: 650px;
+}
+ .login-btn-list{
+        list-style: none;
+        margin-left: 650px;
+        padding-left: 0;
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-family:myFirstFont;
+        font-size: 2em;
+    }
+
+    .login-btn-list{
+        list-style: none;
+        margin-left: 650px;
+        padding-left: 0;
+    }
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+.network-name {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.content-section-a {
+    padding: 240px 0;
+    background-color: #f8f8f8;
+    background: url(../img/wedding-ring.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.section-a-content-h3{
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size:20px;
+    color:black;
+}
+
+.section-a-content-h4{
+    font-size: 15px;
+    color: black;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+.section-a-divider{
+    width: 255px;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-left: 0px;
+}
+
+.section-a-btn{
+    margin-left: -650px;
+}
+.content-section-b {
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    padding: 200px 0;
+    background-color: #f8f8f8;
+    background: url(../img/clift-wedding-venues2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.section-b-content-h3{
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size:20px;
+    color:white;
+     margin-left:800px;
+}
+
+.section-b-content-h4{
+    font-size: 15px;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+     margin-left:800px;
+}
+.section-b-divider{
+    width: 368px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-right: 0px;
+}
+
+.section-b-btn{
+    margin-left: 150px;
+}
+.content-section-c {
+    padding: 240px 0;
+    background-color: #f8f8f8;
+    background: url(../img/weddind-dress.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.section-c-content-h3{
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size:20px;
+    color:white;
+}
+
+.section-c-content-h4{
+    font-size: 15px;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+.section-c-divider{
+    width: 368px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    margin-left: 0px;
+}
+
+.section-c-btn{
+    margin-left: -650px;
+}
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.banner {
+    padding: 100px 0;
+    color: #f8f8f8;
+    background: url(../img/widescreen.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner h2 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 3em;
+}
+
+.banner ul {
+    margin-bottom: 0;
+}
+
+.banner-social-buttons {
+    float: right;
+    margin-top: 0;
+}
+
+@media(max-width:1199px) {
+    ul.banner-social-buttons {
+        float: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:767px) {
+    .banner h2 {
+        margin: 0;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+        font-size: 3em;
+    }
+
+    ul.banner-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.banner-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+footer {
+    padding: 10px 0;
+    background-color: lightgoldenrodyellow;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+.centerText {
+    text-align: center;
+}
+
+
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content p {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+    margin: 20px 0 30px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #222;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #222;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+.modal-content {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+    outline: 0 none;
+    position: relative;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.fade.in {
+    opacity: 1;
+}
+.modal {
+    bottom: 0;
+    display: none;
+    left: 0;
+    outline: 0 none;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1040;
+}
+.fade {
+    opacity: 0;
+    transition: opacity 0.15s linear 0s;
+}
+.portfolio-link {
+    margin: 0 auto;
+    max-width: 400px;
+    position: relative;
+}
+
+
+
+
+
+.form {
+  background:rgba(#13232f,0.9);
+  padding: 40px;
+  max-width:600px;
+  margin:40px auto;
+  border-radius:4px;
+  box-shadow:0 4px 10px 4px rgba(#13232f,0.3);
+}
+
+.tab-group {
+  list-style:none;
+  padding:0;
+  margin:0 0 40px 0;
+}
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.tab-group > li a{
+    display:block;
+    text-decoration:none;
+    padding:15px;
+    background:rgba(#a0b3b0,0.25);
+    color:#a0b3b0;
+    font-size:20px;
+    float:left;
+    width:50%;
+    text-align:center;
+    cursor:pointer;
+    transition:.5s ease;
+  }
+.tab-group > li a:hover {
+      background: salmon;
+      color:#fff;
+    }
+.tab-group .active a {
+    background: orange;
+    color:#fff;
+  }
+.tab-content > div:last-child {
+  display:none;
+}
+
+
+.tab-content > h1 {
+  text-align:center;
+  color:#fff;
+  font-weight:300;
+  margin:0 0 40px;
+}
+
+.pLabel {
+  position:absolute;
+  transform:translateY(6px);
+  left:13px;
+  color:rgba(#fff,.5);
+  transition:all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size:22px;
+}
+
+.req {
+    color:red;
+}
+.pLabel.req {
+  	margin:2px;
+  	color:#1ab188;
+  }
+.pLabel.active {
+  transform:translateY(50px);
+  left:2px;
+  font-size:14px;
+}
+.pLabel.active.req {
+    opacity:0;
+}
+.pLabel.highlight {
+	color:#fff;
+}
+
+.pIn{
+  font-size:22px;
+  display:block;
+  width:100%;
+  height:100%;
+  padding:5px 10px;
+  background:none;
+  background-image:none;
+  border:1px solid #a0b3b0;
+  color:#000;
+  border-radius:0;
+  transition:border-color .25s ease, box-shadow .25s ease;
+}
+
+.pIn:focus {
+		outline:0;
+		border-color:orange;
+  }
+
+.field-wrap {
+  position:relative;
+  margin-bottom:40px;
+}
+
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.top-row > div {
+    float:left;
+    width:48%;
+    margin-right:4%;
+}
+.top-row > div:last-child{
+     margin:0;
+}
+.bttn {
+  border:0;
+  outline:none;
+  border-radius:0;
+  padding:15px 0;
+  font-size:2rem;
+  font-weight: 200;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background:orange;
+  color:white;
+  transition:all.5s ease;
+  -webkit-appearance: none;
+}
+
+.bttn:hover, :focus {
+    background:darken(#1ab188,5%);
+  }
+
+.bttn-block {
+  display:block;
+  width:100%;
+}
+
+.forgot {
+  margin-top:-20px;
+  text-align:right;
+}
+
+.nav li a.colorChange {
+    color: white;
+}
+
+.tab-group li a.expand {
+    width:100%;
+}
+
+.colorFont {
+    color:orange;
+    letter-spacing: 2px;
+    opacity: 0.75;
+}
+a.colorFont:hover{
+    text-decoration: none;
+    color: orange;
+    letter-spacing: 3px;
+    opacity: 1;
+}
+.colorBg {
+    background-color: beige;
+}
+.fontSize {
+    color: salmon; 
+    font-size: 12px;
+}
+.marginTop {
+    margin-top:8px;
+}
+.show-on-hover:hover > ul.dropdown-menu {
+    display: block;    
+}
+iframe {
+    position: relative;
+    left: -37px;
+}

@@ -1,0 +1,528 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <!-- Custom CSS -->
+<link href="css/landing-page.css" rel="stylesheet">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link href="css/shop-homepage.css" rel="stylesheet">
+
+<title>Category</title>
+
+<style>
+.blueback
+{
+font-family:cursive;
+}
+.centertext
+{
+text-align:center;
+}
+.roundborder
+{
+border:1px solid #FF9900;
+border-radius:5px
+}
+.yellowtext
+{color:#FF9900;
+font-size:20px
+}
+.fixedpos
+{
+position:fixed;
+}
+.fullheight
+{
+height:100%;
+}
+
+#chktext:hover
+{
+color:#FF9900;
+}
+.thumbnail {
+    float: left;
+    width: 110px;
+    height: 200px;
+    margin: 7px;
+	cursor:pointer;
+	transition: width 2s, height 1s;
+}
+.thumbnail:hover
+{
+width:220px;
+height:400px;
+}
+.topmargin
+{
+margin-top:3%;
+}
+.leftblock
+{
+border-right:1px solid #FF9900;
+border-bottom:1px solid #FF9900;
+padding-left:50px;
+}
+#colorbut:hover
+{
+opacity:.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#portfolio .portfolio-item {
+    right: 0;
+    margin: 0 0 15px;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    transition: all ease .5s;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    margin-top: -12px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+    margin-top: -12px;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+    margin: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 400px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 {
+    margin: 0;
+    text-transform: none;
+}
+
+#portfolio .portfolio-item .portfolio-caption p {
+    margin: 0;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+#portfolio * {
+    z-index: 2;
+}
+
+@media(min-width:767px) {
+    #portfolio .portfolio-item {
+        margin: 0 0 30px;
+    }
+}
+
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content p {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+    margin: 20px 0 30px;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 10px;
+    height: 10px;
+    margin-left: 35px;
+    background-color: #222;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 10px;
+    height: 10px;
+    background-color: #222;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+
+#map-canvas {
+        width: 550px;
+        height: 150px;
+      }
+	 .specialbut
+	 {height:20px;width:90px;padding-left:5px;padding-right:5px;padding-top:1px;padding-bottom:2px
+	 }
+}
+input[placeholder], [placeholder], *[placeholder] {
+color: #FF9900	;
+}
+	  .orange
+	  {
+	  color:#FF9900;
+	  }
+	  hr {
+  color: #FF9900;
+}
+
+
+</style>
+
+
+
+<script>
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 0) {
+     $('#myTab li').css('background','none');
+    } else {
+       $('#myTab li').css('background','');
+    }
+});
+
+</script>
+
+
+
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-default topnav mainHeaderDiv" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div>
+                <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+                <nav id="sidebar-wrapper">
+                    <ul class="sidebar-nav">
+                        <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+                        <li class="sidebar-brand">
+                            <a href="#top">Categories</a>
+                        </li>
+                         <li>
+                            <a href="bridedress.html">Bride Dress</a>
+                        </li>
+                        <li>
+                            <a href="groomdress.html">Groom Dress</a>
+                        </li>
+                        <li>
+                            <a href="caterers.html">Caterers & vendors</a>
+                        </li>
+                        <li>
+                            <a href="honeymoon.html">Honeymoon Spots</a>
+                        </li>
+                        <li>
+                            <a href="jewelry.html">Jewelry</a>
+                        </li>
+                        <li>
+                            <a href="cards.html">Cards</a>
+                        </li>
+                        <li>
+                            <a href="venue.html">Venue</a>
+                        </li>
+                        <li>
+                            <a href="guestlist.html">Making guest list</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="navbar-header">
+                <a class="topnav headerFont" href="#">Wedding Planning Redefined</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right ">
+                    <li>
+                        <div class="btn-group show-on-hover">
+                            <button type="button" class="btn btn-default dropdown-toggle marginTop" data-toggle="dropdown">Cindy <span class="caret"></span>
+                            </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Account Settings</a></li>
+                            <li><a href="favorite.html">Favorites</a></li>
+                            <li><a href="#">Log Out</a></li>
+                        </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+	
+	
+	
+
+   <nav class="navbar navbar-inverse " role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"  >Home</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                            <a href="category2.html">Bride Dress</a>
+                        </li>
+                        <li>
+                            <a href="groom3.html">Groom Dress</a>
+                        </li>
+                        <li>
+                            <a href="caterer.html">Caterers & vendors</a>
+                        </li>
+                        <li>
+                            <a href="honeymoon.html">Honeymoon Spots</a>
+                        </li>
+                        <li>
+                            <a href="jewelry.html">Jewelry</a>
+                        </li>
+                        <li>
+                            <a href="cards.html">Cards</a>
+                        </li>
+                        <li>
+                            <a href="venue.html">Venue</a>
+                        </li>
+                        <li>
+                            <a href="guestlist.html">Making guest list</a>
+                        </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+		
+		
+		
+        <!-- /.container -->
+    </nav>
+
+<!-- Tab 1 -->
+
+  
+    
+   
+   <!--Tab 9 -->
+   <div class="tab-pane fade in active" id="guest">
+   
+   
+   <div class="container" >
+			
+            <div class="row">
+                <h2 class="orange">Your Guest List</h2><br><br><br>
+				<div class="col-lg-12">
+				<div class="col-lg-3"> 
+				<font size="4" color="" face="Tahoma" >Name</font><hr background-color="red"><br><br>Megha<br>Nikhil<br>Prince
+				</div>
+				<div class="col-lg-3"> 
+				<font size="4" color="" face="Tahoma" >Contact No.</font><hr><br><br>(213)294-9810<br>(213)294-9809<br>(213)294-9860<br>
+				</div>
+				<div class="col-lg-3"> 
+				<font size="4" color="" face="Tahoma" >Email ID</font><hr><br><br>mega@usc.edu<br>nikhilv@usc.edu<br>phemraja@usc.edu
+				</div>
+				<div class="col-lg-3"> 
+				<font size="4" color="" face="Tahoma" >RSVP</font><hr><br><br>
+				<button type="button" class="btn btn-default orange specialbut" >Yes</button>&nbsp;&#183;&nbsp;<button type="button" class="btn btn-default orange specialbut">No</button><br>
+				<button type="button" class="btn btn-default orange specialbut">Yes</button>&nbsp;&#183;&nbsp;<button type="button" class="btn btn-default orange specialbut">No</button><br>
+				<button type="button" class="btn btn-default orange specialbut">Yes</button>&nbsp;&#183;&nbsp;<button type="button" class="btn btn-default orange specialbut">No</button>
+				</div>
+				</div>
+				<br><br><br><br><br><br><br><Br><br><br><br>
+		
+			<div class="col-lg-12">
+				
+		<form class="form-inline">
+		<div class="form-group col-lg-3">
+		<label class="sr-only" for="exampleInputEmail3">Name</label>
+		<input type="text" class="form-control" id="exampleInputEmail3" placeholder="Enter Name">
+		</div>
+		<div class="form-group col-lg-3">
+		<label class="sr-only" for="exampleInputPassword3">Contact No.</label>
+		<input type="text" class="form-control" id="exampleInputPassword3" placeholder="Enter Contact No.">
+		</div > 
+		<div class="form-group col-lg-6">
+		<label class="sr-only orange" for="exampleInputPassword3">Email ID</label>
+		<input type="text" class="form-control orange" id="exampleInputPassword3" placeholder="Enter Email ID">
+		&nbsp;&nbsp;
+		<abbr title="click to add"><span class="glyphicon glyphicon-plus orange" onclick="alert('Feature Unavailable')"></span></abbr>
+         </div>
+	</div>
+	<br><Br><br><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="4" color="" face="Tahoma" >Count of guest: 3</font>
+        <!-- /.container -->
+    </div>
+   
+   
+   
+   </div>
+   <!-- end of tabs -->
+   
+
+<!-- Footer -->
+    <footer style="margin-top:7%">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <ul class="list-inline centerText">
+                        <li>                        
+                            <a href="index.html" class="colorFont">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-inline centerText">
+                        <li>
+                            <a  class="colorFont">About Us</a>
+                            <p class="fontSize">Established since 2015. Serving the needs of the wedding couples on the go. Get the information whenever needed, wherever you are.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-inline centerText">
+                    
+                        <li>
+                            <a class="colorFont" >Contact Us</a>
+                            <p class="fontSize">help@wpredefined.com<br/>213-123-1234</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <ul class="list-inline centerText">
+                        <li>
+                            <a href="feedback.html" class="colorFont">Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline centerText">
+                       
+                    </ul>
+                    <p class="centerText colorFont copyright text-muted small">Copyright &copy; Wedding Planning Redefined 2015. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+        });
+    </script>
+	<noscript>
+</body>
+</html>
